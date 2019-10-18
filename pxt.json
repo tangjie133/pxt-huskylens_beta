@@ -8,7 +8,7 @@
     },
     "files": [
         "HuskyLens.ts",
-        "_locales/zh-cn/Huskylens-strings.json"
+        "_locales/zh-cn/HuskyLens-strings.json"
     ],
     "testFiles": [],
     "public": true,
