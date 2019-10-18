@@ -1,0 +1,6 @@
+{
+    "HuskyLensProtocol.get_x|block": "获取X",
+    "HuskyLensProtocol.get_y|block": "获取Y",
+    "HuskyLensProtocol.get_distance|block": "获取距离",
+    "HuskyLensProtocol.get_number|block":"获取次数"
+}

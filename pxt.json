@@ -1,0 +1,16 @@
+{
+    "name": "HuskyLens",
+    "version": "0.0.1",
+    "description": "HuskyLensProtocol",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "HuskyLens.ts",
+        "_locales/zh-cn/HuskyLensProtocol-strings.json"
+    ],
+    "testFiles": [],
+    "public": false,
+    "license": "MIT"
+}

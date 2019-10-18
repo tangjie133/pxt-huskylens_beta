@@ -1,0 +1,19 @@
+{
+    "HuskyLens.ObjiectTrackingX|block":"目标跟踪X坐标",
+    "HuskyLens.ObjectTrackingY|block":"目标跟踪Y坐标",
+    "HuskyLens.ObjectTrackingDistance|block":"目标跟踪距离",
+    "HuskyLens.FaceRecognitionX|block":"人脸识别X坐标",
+    "HuskyLens.FaceRecognitionY|block":"人脸识别Y坐标",
+    "HuskyLens.FaceRecogitionDistance|block":"人脸识别距离",
+    "HuskyLens.ObjectRecognitionX|block":"目标识别X坐标",
+    "HuskyLens.ObjectRecognitionY|block":"目标识别Y坐标",
+    "HuskyLens.ObjectRecognitionDistance|block":"目标识别距离",
+    "HuskyLens.LineTrackingX|block":"线路跟踪X坐标",
+    "HuskyLens.LineTrackingY|block":"线路跟踪Y坐标",
+    "HuskyLens.ColorRecognitionX|block":"颜色识别X坐标",
+    "HuskyLens.ColorRecognitionY|block":"颜色识别Y坐标",
+    "HuskyLens.TagRecognitionX|block":"二维码识别X坐标",
+    "HuskyLens.TagrecognitionY|block":"二维码识别Y坐标",
+    "HuskyLens.TagRecgnitionDiatance|block":"获取二维码距离",
+    "HuskyLens.TagRecgnitionSign|block":"二维码ID"
+}
