@@ -13,5 +13,6 @@
     "testFiles": [],
     "public": true,
     "license": "MIT",
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "installedVersion": "workspace:e63fc689-949e-4985-9fe3-f4a33040a7e8"
 }
