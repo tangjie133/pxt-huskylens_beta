@@ -1,7 +1,7 @@
 {
-    "name": "HuskyLens",
+    "name": "Huskylens",
     "version": "0.0.1",
-    "description": "HuskyLensProtocol",
+    "description": "Huskylens",
     "dependencies": {
         "core": "*",
         "radio": "*"
@@ -11,6 +11,7 @@
         "_locales/zh-cn/HuskyLensProtocol-strings.json"
     ],
     "testFiles": [],
-    "public": false,
-    "license": "MIT"
+    "public": true,
+    "license": "MIT",
+    "preferredEditor": "tsprj"
 }
