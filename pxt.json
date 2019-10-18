@@ -8,11 +8,10 @@
     },
     "files": [
         "HuskyLens.ts",
-        "_locales/zh-cn/HuskyLens-strings.json"
+        "_locales/zh-cn/Huskylens-strings.json"
     ],
     "testFiles": [],
     "public": true,
     "license": "MIT",
-    "preferredEditor": "tsprj",
-    "installedVersion": "workspace:e63fc689-949e-4985-9fe3-f4a33040a7e8"
+    "preferredEditor": "tsprj"
 }
