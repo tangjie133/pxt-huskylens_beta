@@ -1,3 +1,37 @@
+/**
+ * 获取内容二维码
+ */
+enum Content{
+    //% block="X coordinates"
+    X_COORDINATES = 1,
+    //% block="Y coordonates"
+    Y_COORDINATES = 2,
+    //% block="object lenght"
+    LENGHT = 3,
+    //% block="object width"
+    WIDTH = 4,
+    //% block="object sign"
+    SIGN = 5,
+    //% block="QR code ID"
+    ID = 6
+}
+/**
+ * 其他
+ */
+enum Content1 {
+    //% block="X coordinates"
+    X_COORDINATES = 1,
+    //% block="Y coordonates"
+    Y_COORDINATES = 2,
+    //% block="object lenght"
+    LENGHT = 3,
+    //% block="object width"
+    WIDTH = 4,
+    //% block="object sign"
+    SIGN = 5,
+    
+}
+
 //% weight=100  color=#00A654 block="Huskylens"
 namespace HuskyLens {
     let FRAME_BUFFER_SIZE = 128
@@ -22,202 +56,137 @@ namespace HuskyLens {
     let y1 = 0;
     let x2 = 0;
     let y2 = 0;
+    let x3 = 0;
+    let y3 = 0;
 
     /**
      * Object Tracking
      */
 
     //% weight=200
-    //% block="get object tracking X"
+    //% block="get object tracking |%content"
     //% color=#31C7D5
-    export function ObjiectTrackingX(): number {
-        //let x = 0;
-        //let i = 0;
-        //x = x1
-        //serial.writeNumber(x)
-        return x1;
+    export function ObjiectTracking(content: Content1): number {
+        if(content == 1){
+            return x1;
+        }else if(content == 2){
+            return y1;
+        }else if(content == 3){
+            return x2;
+        }else if(content == 4){
+            return x3;
+        } 
+            return y3;
+       
     }
-    //% weight=190
-    //% block="get object tracking Y"
-    //% color=#31C7D5
-    export function ObjectTrackingY(): number {
-        //let y = 0;
-        //y = y1
-        //serial.writeNumber(y)
-        return y1;
-    }
-    //% weight=180
-    //% block="get object tracking distance"
-    //% color=#31C7D5
-    export function ObjectTrackingDistance(): number {
-        //let l = 0;
-        //l = x2;
-        //serial.writeNumber(l)
-        return x2;
-    }
-/*
-    //% weight=170
-    //% block="get object tracking sign"
-    export function ObjecttrackingSign(): number {
-        //let n = 0;
-        //n = y2;
-        //serial.writeNumber(n)
-        return y2;
-    }*/
+   
 
     /**
     * Face Recognition
     */
 
-    //%block="get face recognition X"
+    //%block="get face recognition |%content"
     //%weight=160
     //% color=#00A654
-    export function FaceRecognitionX(): number {
-        return x1;
+    export function FaceRecognition(content: Content1): number {
+        if (content == 1) {
+            return x1;
+        } else if (content == 2) {
+            return y1;
+        } else if (content == 3) {
+            return x2;
+        } else if (content == 4) {
+            return x3;
+        }
+        return y3;
     }
-
-    //%block="get face recognition y"
-    //%weight=150
-    //% color=#00A654
-    export function FaceRecognitionY(): number {
-        return y1;
-    }
-
-    //%block="get face recognition distance"
-    //%weight=140
-    //% color=#00A654
-    export function FaceRecogitionDistance(): number {
-        return x2;
-    }
-    /*
-    //%block="get face recognition sign"
-    //%weight=130
-    export function FaceRecogitionSign(): number {
-        return y2;
-    }*/
+   
 
     /**
      * Object Recognition
      */
 
-    //%block="get object recognition X"
+    //%block="get object recognition |%content"
     //%weight=120
     //% color=#7f00ff
-    export function ObjectRecognitionX(): number {
-        return x1;
+    export function ObjectRecognition(content: Content1): number {
+        if (content == 1) {
+            return x1;
+        } else if (content == 2) {
+            return y1;
+        } else if (content == 3) {
+            return x2;
+        } else if (content == 4) {
+            return x3;
+        }
+        return y3;
     }
-
-    //%block="get object recognition Y"
-    //%weight=110
-    //% color=#7f00ff
-    export function ObjectRecognitionY(): number {
-        return y1;
-    }
-    /*
-    //%block="get object recognition distance"
-    //%weight=100
-    export function ObjectRecognitionDistance(): number {
-        return x2;
-    }
-    
-    //%block="get object recognition sign"
-    //%weight=99
-    export function ObjectRecognitionSign(): number {
-        return y2;
-    }*/
+   
 
     /**
      * Line Tracking
      */
 
-    //% block="get line tracking X"
+    //% block="get line tracking |%content"
     //% weight=98
     //% color=#D063CF
-    export function LineTrackingX(): number {
-        return x1;
+    export function LineTracking(content: Content1): number {
+        if (content == 1) {
+            return x1;
+        } else if (content == 2) {
+            return y1;
+        } else if (content == 3) {
+            return x2;
+        } else if (content == 4) {
+            return x3;
+        }
+        return y3;
     }
-
-    //% block="get line tracking Y"
-    //% weight=97
-    //% color=#D063CF
-    export function LineTrackingY(): number {
-        return y1;
-    }
-    /*
-    //%block="get line tracking diatance"
-    //%weight=96
-    export function LineTrackingDiatance(): number {
-        return x2;
-    }
-
-    //%block="get line tracking sign"
-    //%weight=95
-    export function LineTrackingSing(): number {
-        return y2;
-    }*/
+   
 
     /**
      * Color Recognition
      */
 
-    //%block="get color recognition X"
+    //%block="get color recognition |%content"
     //%weight=94
     //% color=#ff8000
-    export function ColorRecognitionX(): number {
-        return x1;
+    export function ColorRecognition(content: Content1): number {
+        if (content == 1) {
+            return x1;
+        } else if (content == 2) {
+            return y1;
+        } else if (content == 3) {
+            return x2;
+        } else if (content == 4) {
+            return x3;
+        }
+        return y3;
     }
-
-    //%block="get color recognition Y"
-    //%weight=93
-    //% color=#ff8000
-    export function ColorRecognitionY(): number {
-        return y1;
-    }
-    /*
-    //%block="get color recognition diatance"
-    //%weight=92
-    export function ColorRecognitionDiatance(): number {
-        return x2;
-    }
-    
-    //%block="get color recognition sign"
-    //%weight=91
-    export function ColorRecognitionSign(): number {
-        return y2;
-    }*/
+   
 
     /**
      * Tag Recognition
      */
 
-    //%block="get tag recognition X"
+    //%block="get tag recognition |%content"
     //%weight=90
     //% color=#007fff
-    export function TagRecognitionX(): number {
-        return x1;
+    export function TagRecognition(content: Content): number {
+        if (content == 1) {
+            return x1;
+        } else if (content == 2) {
+            return y1;
+        } else if (content == 3) {
+            return x2;
+        } else if (content == 4) {
+            return x3;
+        } else if (content == 5) {
+            return y3;
+        }
+        return y2
     }
-
-    //%block="get tag recognition Y"
-    //%weight=89
-    //% color=#007fff
-    export function TagrecognitionY(): number {
-        return y1;
-    }
-
-    //%block="get tag recgnition diatance"
-    //%weight=88
-    //% color=#007fff
-    export function TagRecgnitionDiatance(): number {
-        return x2;
-    }
-
-    //%block="get tag recgnition sign"
-    //%weight=87
-    //% color=#007fff
-    export function TagRecgnitionSign(): number {
-        return y2;
-    }
-
+    
     function read(): boolean {
         let i;
         //let x = pins.i2cReadNumber(0X32, NumberFormat.UInt16LE, false);
@@ -234,7 +203,11 @@ namespace HuskyLens {
                 if (buf[10] == 1) {
                     x2 = 255 + buf[9];
                 } else { x2 = buf[9]; }
+                if(buf[12] == 1){
+                    x3 =buf[11]+255;
+                }else{x3= buf[11];}
                 y2 = buf[13]
+                y3 = buf[15]
                 //serial.writeNumber(buf[14] )
                 return true
             }
