@@ -1,4 +1,4 @@
-//% weight=100 color="#AA278D"  block="Huskylens"
+//% weight=100  color=#00A654 block="Huskylens"
 namespace HuskyLens {
     let FRAME_BUFFER_SIZE = 128
     let HEADER_0_INDEX = 0
@@ -29,6 +29,7 @@ namespace HuskyLens {
 
     //% weight=200
     //% block="get object tracking X"
+    //% color=#AA278D 
     export function ObjiectTrackingX(): number {
         //let x = 0;
         //let i = 0;
@@ -38,6 +39,7 @@ namespace HuskyLens {
     }
     //% weight=190
     //% block="get object tracking Y"
+    //% color=#AA278D
     export function ObjectTrackingY(): number {
         //let y = 0;
         //y = y1
@@ -46,6 +48,7 @@ namespace HuskyLens {
     }
     //% weight=180
     //% block="get object tracking distance"
+    //% color=#AA278D
     export function ObjectTrackingDistance(): number {
         //let l = 0;
         //l = x2;
@@ -68,18 +71,21 @@ namespace HuskyLens {
 
     //%block="get face recognition X"
     //%weight=160
+    //% color=#00A654
     export function FaceRecognitionX(): number {
         return x1;
     }
 
     //%block="get face recognition y"
     //%weight=150
+    //% color=#00A654
     export function FaceRecognitionY(): number {
         return y1;
     }
 
     //%block="get face recognition distance"
     //%weight=140
+    //% color=#00A654
     export function FaceRecogitionDistance(): number {
         return x2;
     }
@@ -96,12 +102,14 @@ namespace HuskyLens {
 
     //%block="get object recognition X"
     //%weight=120
+    //% color=#008B00
     export function ObjectRecognitionX(): number {
         return x1;
     }
 
     //%block="get object recognition Y"
     //%weight=110
+    //% color=#008B00
     export function ObjectRecognitionY(): number {
         return y1;
     }
@@ -122,14 +130,16 @@ namespace HuskyLens {
      * Line Tracking
      */
 
-    //%block="get line tracking X"
-    //%weight=98
+    //% block="get line tracking X"
+    //% weight=98
+    //% color=#D063CF
     export function LineTrackingX(): number {
         return x1;
     }
 
-    //%block="get line tracking Y"
-    //%weight=97
+    //% block="get line tracking Y"
+    //% weight=97
+    //% color=#D063CF
     export function LineTrackingY(): number {
         return y1;
     }
@@ -152,12 +162,14 @@ namespace HuskyLens {
 
     //%block="get color recognition X"
     //%weight=94
+    //% color=#ff0000
     export function ColorRecognitionX(): number {
         return x1;
     }
 
     //%block="get color recognition Y"
     //%weight=93
+    //% color=#ff0000
     export function ColorRecognitionY(): number {
         return y1;
     }
@@ -180,24 +192,28 @@ namespace HuskyLens {
 
     //%block="get tag recognition X"
     //%weight=90
+    //% color=#ff8000
     export function TagRecognitionX(): number {
         return x1;
     }
 
     //%block="get tag recognition Y"
     //%weight=89
+    //% color=#ff8000
     export function TagrecognitionY(): number {
         return y1;
     }
 
     //%block="get tag recgnition diatance"
     //%weight=88
+    //% color=#ff8000
     export function TagRecgnitionDiatance(): number {
         return x2;
     }
 
     //%block="get tag recgnition sign"
     //%weight=87
+    //% color=#ff8000
     export function TagRecgnitionSign(): number {
         return y2;
     }
