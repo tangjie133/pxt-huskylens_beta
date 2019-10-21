@@ -29,7 +29,7 @@ namespace HuskyLens {
 
     //% weight=200
     //% block="get object tracking X"
-    //% color=#AA278D 
+    //% color=#31C7D5
     export function ObjiectTrackingX(): number {
         //let x = 0;
         //let i = 0;
@@ -39,7 +39,7 @@ namespace HuskyLens {
     }
     //% weight=190
     //% block="get object tracking Y"
-    //% color=#AA278D
+    //% color=#31C7D5
     export function ObjectTrackingY(): number {
         //let y = 0;
         //y = y1
@@ -48,7 +48,7 @@ namespace HuskyLens {
     }
     //% weight=180
     //% block="get object tracking distance"
-    //% color=#AA278D
+    //% color=#31C7D5
     export function ObjectTrackingDistance(): number {
         //let l = 0;
         //l = x2;
@@ -102,14 +102,14 @@ namespace HuskyLens {
 
     //%block="get object recognition X"
     //%weight=120
-    //% color=#008B00
+    //% color=#7f00ff
     export function ObjectRecognitionX(): number {
         return x1;
     }
 
     //%block="get object recognition Y"
     //%weight=110
-    //% color=#008B00
+    //% color=#7f00ff
     export function ObjectRecognitionY(): number {
         return y1;
     }
@@ -162,14 +162,14 @@ namespace HuskyLens {
 
     //%block="get color recognition X"
     //%weight=94
-    //% color=#ff0000
+    //% color=#ff8000
     export function ColorRecognitionX(): number {
         return x1;
     }
 
     //%block="get color recognition Y"
     //%weight=93
-    //% color=#ff0000
+    //% color=#ff8000
     export function ColorRecognitionY(): number {
         return y1;
     }
@@ -192,28 +192,28 @@ namespace HuskyLens {
 
     //%block="get tag recognition X"
     //%weight=90
-    //% color=#ff8000
+    //% color=#007fff
     export function TagRecognitionX(): number {
         return x1;
     }
 
     //%block="get tag recognition Y"
     //%weight=89
-    //% color=#ff8000
+    //% color=#007fff
     export function TagrecognitionY(): number {
         return y1;
     }
 
     //%block="get tag recgnition diatance"
     //%weight=88
-    //% color=#ff8000
+    //% color=#007fff
     export function TagRecgnitionDiatance(): number {
         return x2;
     }
 
     //%block="get tag recgnition sign"
     //%weight=87
-    //% color=#ff8000
+    //% color=#007fff
     export function TagRecgnitionSign(): number {
         return y2;
     }
