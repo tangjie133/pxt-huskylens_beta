@@ -1,23 +1,4 @@
-/**
- * 获取内容二维码
- */
-enum Content{
-    //% block="X coordinates"
-    X_COORDINATES = 1,
-    //% block="Y coordonates"
-    Y_COORDINATES = 2,
-    //% block="object lenght"
-    LENGHT = 3,
-    //% block="object width"
-    WIDTH = 4,
-    //% block="object sign"
-    SIGN = 5,
-    //% block="QR code ID"
-    ID = 6
-}
-/**
- * 其他
- */
+
 enum Content1 {
     //% block="X coordinates"
     X_COORDINATES = 1,
@@ -76,7 +57,7 @@ namespace HuskyLens {
         }else if(content == 4){
             return x3;
         } 
-            return y3;
+            return y2;
        
     }
    
@@ -98,7 +79,7 @@ namespace HuskyLens {
         } else if (content == 4) {
             return x3;
         }
-        return y3;
+        return y2;
     }
    
 
@@ -119,7 +100,7 @@ namespace HuskyLens {
         } else if (content == 4) {
             return x3;
         }
-        return y3;
+        return y2;
     }
    
 
@@ -140,7 +121,7 @@ namespace HuskyLens {
         } else if (content == 4) {
             return x3;
         }
-        return y3;
+        return y2;
     }
    
 
@@ -161,7 +142,7 @@ namespace HuskyLens {
         } else if (content == 4) {
             return x3;
         }
-        return y3;
+        return y2;
     }
    
 
@@ -172,7 +153,7 @@ namespace HuskyLens {
     //%block="get tag recognition |%content"
     //%weight=90
     //% color=#007fff
-    export function TagRecognition(content: Content): number {
+    export function TagRecognition(content: Content1): number {
         if (content == 1) {
             return x1;
         } else if (content == 2) {
@@ -181,9 +162,7 @@ namespace HuskyLens {
             return x2;
         } else if (content == 4) {
             return x3;
-        } else if (content == 5) {
-            return y3;
-        }
+        } 
         return y2
     }
     
@@ -207,7 +186,7 @@ namespace HuskyLens {
                     x3 =buf[11]+255;
                 }else{x3= buf[11];}
                 y2 = buf[13]
-                y3 = buf[15]
+                //y3 = buf[15]
                 //serial.writeNumber(buf[14] )
                 return true
             }
