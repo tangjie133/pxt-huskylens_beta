@@ -1,4 +1,13 @@
+/** 
+ * @file pxt-huskyl_beta/Huskylens.ts
 
+ * @copyright    [DFRobot](http://www.dfrobot.com), 2016
+ * @copyright    MIT Lesser General Public License
+ * 
+ * @author [email](jie.tang@dfrobot.com)
+ * @version  V0.0.2 beta
+ * @date  2019-11-20
+*/
 let IDnumber1: number[] = [0];
 
 let x1 = 0;
