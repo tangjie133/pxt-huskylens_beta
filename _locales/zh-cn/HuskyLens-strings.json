@@ -15,5 +15,6 @@
     "Content.LENGHT|block": "目标框长度",
     "Content.WIDTH|block": "目标框宽度",
     "Content.SIGN|block": "目标ID",
-    "Content.ID|block":"二维码ID"
+    "Content.ID|block":"二维码ID",
+    "HuskyLens.IDNumber|block":"设置ID获取数据|%n"
 }
