@@ -52,7 +52,7 @@ namespace HuskyLens {
     let content_end = 0;
     let content_read_end = false;
 
-    //% weight=200
+    //% weight=20
     //% block="set ID get number|%n"
     //% n.min=1 n.max=1000 n.defl=1
     export function IDNumber(n: number): void {
