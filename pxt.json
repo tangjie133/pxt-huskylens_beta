@@ -1,6 +1,6 @@
 {
     "name": "HuskyLens",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Huskylens",
     "dependencies": {
         "core": "*",
@@ -14,5 +14,5 @@
     "public": true,
     "license": "MIT",
     "preferredEditor": "tsprj",
-    "installedVersion": "workspace:a6f8af03-33f6-4d1d-001c-457b9c31cfc4"
+    "installedVersion": "workspace:ad0e778a-93fd-4be9-5d9b-3a5705fc3b1a"
 }
