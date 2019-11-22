@@ -40,7 +40,7 @@ enum Content {
 
 //% weight=100  color=#00A654 block="Huskylens"
 namespace HuskyLens {
-    let i = 0;
+    let i = 1;
     let FRAME_BUFFER_SIZE = 128
     let HEADER_0_INDEX = 0
     let HEADER_1_INDEX = 1
@@ -61,9 +61,9 @@ namespace HuskyLens {
 
     //% weight=200
     //% block="set ID get number|%n"
-    //% n.min=1 n.max=1000 n.defl=1
+    //% n.min=1 n.max=5 n.defl=1
     export function IDNumber(n: number): void {
-        i = n - 1;
+        i = n;
     }
 
     /**
@@ -75,15 +75,15 @@ namespace HuskyLens {
     //% color=#31C7D5
     export function ObjiectTracking(content: Content1): number {
         if (content == 1) {
-            return IDnumber1[i * 5 + 0];
+            return IDnumber1[0];
         } else if (content == 2) {
-            return IDnumber1[i * 5 + 1];
+            return IDnumber1[1];
         } else if (content == 3) {
-            return IDnumber1[i * 5 + 2];
+            return IDnumber1[2];
         } else if (content == 4) {
-            return IDnumber1[i * 5 + 3];
+            return IDnumber1[3];
         }
-        return IDnumber1[i * 5 + 4];
+        return IDnumber1[4];
 
     }
 
@@ -96,15 +96,15 @@ namespace HuskyLens {
     //% color=#00A654
     export function FaceRecognition(content: Content1): number {
         if (content == 1) {
-            return IDnumber1[i * 5 + 0];
+            return IDnumber1[0];
         } else if (content == 2) {
-            return IDnumber1[i * 5 + 1];
+            return IDnumber1[1];
         } else if (content == 3) {
-            return IDnumber1[i * 5 + 2];
+            return IDnumber1[2];
         } else if (content == 4) {
-            return IDnumber1[i * 5 + 3];
+            return IDnumber1[3];
         }
-        return IDnumber1[i * 5 + 4];
+        return IDnumber1[4];
     }
 
 
@@ -117,15 +117,15 @@ namespace HuskyLens {
     //% color=#7f00ff
     export function ObjectRecognition(content: Content1): number {
         if (content == 1) {
-            return IDnumber1[i * 5 + 0];
+            return IDnumber1[0];
         } else if (content == 2) {
-            return IDnumber1[i * 5 + 1];
+            return IDnumber1[1];
         } else if (content == 3) {
-            return IDnumber1[i * 5 + 2];
+            return IDnumber1[2];
         } else if (content == 4) {
-            return IDnumber1[i * 5 + 3];
+            return IDnumber1[3];
         }
-        return IDnumber1[i * 5 + 4];
+        return IDnumber1[4];
     }
 
 
@@ -138,9 +138,9 @@ namespace HuskyLens {
     //% color=#D063CF
     export function LineTracking(content: Content): number {
         if (content == 1) {
-            return IDnumber1[i * 5 + 0];
+            return IDnumber1[0];
         } else if (content == 2) {
-            return IDnumber1[i * 5 + 1];
+            return IDnumber1[1];
         }
         return 0
     }
@@ -155,15 +155,15 @@ namespace HuskyLens {
     //% color=#ff8000
     export function ColorRecognition(content: Content1): number {
         if (content == 1) {
-            return IDnumber1[i * 5 + 0];
+            return IDnumber1[0];
         } else if (content == 2) {
-            return IDnumber1[i * 5 + 1];
+            return IDnumber1[1];
         } else if (content == 3) {
-            return IDnumber1[i * 5 + 2];
+            return IDnumber1[2];
         } else if (content == 4) {
-            return IDnumber1[i * 5 + 3];
+            return IDnumber1[3];
         }
-        return IDnumber1[i * 5 + 4];
+        return IDnumber1[4];
     }
 
 
@@ -176,15 +176,15 @@ namespace HuskyLens {
     //% color=#007fff
     export function TagRecognition(content: Content1): number {
         if (content == 1) {
-            return IDnumber1[i * 5 + 0];
+            return IDnumber1[0];
         } else if (content == 2) {
-            return IDnumber1[i * 5 + 1];
+            return IDnumber1[1];
         } else if (content == 3) {
-            return IDnumber1[i * 5 + 2];
+            return IDnumber1[2];
         } else if (content == 4) {
-            return IDnumber1[i * 5 + 3];
+            return IDnumber1[3];
         }
-        return IDnumber1[i * 5 + 4];
+        return IDnumber1[4];
     }
 
     function read(): boolean {
@@ -271,17 +271,18 @@ namespace HuskyLens {
         return false;
     }
 
+    function data(): void {
+        IDnumber1[0] = x1;
+        IDnumber1[1] = y1;
+        IDnumber1[2] = x2;
+        IDnumber1[3] = x3;
+        IDnumber1[4] = y2;
+    }
+
     basic.forever(() => {
         read();
-        if (y2 > 0) {
-            IDnumber1[(y2 - 1) * 5 + 0] = x1;
-            IDnumber1[(y2 - 1) * 5 + 1] = y1;
-            IDnumber1[(y2 - 1) * 5 + 2] = x2;
-            IDnumber1[(y2 - 1) * 5 + 3] = x3;
-            IDnumber1[(y2 - 1) * 5 + 4] = y2;
-        } else {
-            IDnumber1[(Math.abs(y2) - 1) * 5 + 4] = y2;
-        }
+        if (Math.abs(y2) == i)
+            data();
         basic.pause(20);
     })
 }
