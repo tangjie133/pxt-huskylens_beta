@@ -3,9 +3,9 @@
 
  * @copyright    [DFRobot](http://www.dfrobot.com), 2016
  * @copyright    MIT Lesser General Public License
- * 
+ 
  * @author [email](jie.tang@dfrobot.com)
- * @version  V0.0.2 beta
+ * @version  V0.0.2
  * @date  2019-11-20
 */
 let IDnumber1: number[] = [0];
@@ -30,6 +30,13 @@ enum Content1 {
     SIGN = 5,
 
 }
+enum Content {
+    //% block="X coordinates"
+    X_COORDINATES = 1,
+    //% block="Y coordonates"
+    Y_COORDINATES = 2
+
+}
 
 //% weight=100  color=#00A654 block="Huskylens"
 namespace HuskyLens {
@@ -52,7 +59,7 @@ namespace HuskyLens {
     let content_end = 0;
     let content_read_end = false;
 
-    //% weight=20
+    //% weight=200
     //% block="set ID get number|%n"
     //% n.min=1 n.max=1000 n.defl=1
     export function IDNumber(n: number): void {
@@ -79,7 +86,6 @@ namespace HuskyLens {
         return IDnumber1[i * 5 + 4];
 
     }
-
 
     /**
     * Face Recognition
@@ -130,17 +136,13 @@ namespace HuskyLens {
     //% block="get line tracking |%content"
     //% weight=98
     //% color=#D063CF
-    export function LineTracking(content: Content1): number {
+    export function LineTracking(content: Content): number {
         if (content == 1) {
             return IDnumber1[i * 5 + 0];
         } else if (content == 2) {
             return IDnumber1[i * 5 + 1];
-        } else if (content == 3) {
-            return IDnumber1[i * 5 + 2];
-        } else if (content == 4) {
-            return IDnumber1[i * 5 + 3];
         }
-        return IDnumber1[i * 5 + 4];
+        return 0
     }
 
 
