@@ -5,11 +5,10 @@
  * @copyright    MIT Lesser General Public License
  
  * @author [email](jie.tang@dfrobot.com)
- * @version  V0.0.2
+ * @version  V0.0.3
  * @date  2019-11-20
 */
 let IDnumber1: number[] = [0];
-
 let x1 = 0;
 let y1 = 0;
 let x2 = 0;
@@ -27,14 +26,15 @@ enum Content1 {
     //% block="object width"
     WIDTH = 4,
     //% block="object sign"
-    SIGN = 5,
-
+    SIGN = 5
 }
 enum Content {
     //% block="X coordinates"
     X_COORDINATES = 1,
     //% block="Y coordonates"
-    Y_COORDINATES = 2
+    Y_COORDINATES = 2,
+    //% block="object sign"
+    SIGN = 5
 
 }
 
@@ -139,10 +139,9 @@ namespace HuskyLens {
     export function LineTracking(content: Content): number {
         if (content == 1) {
             return IDnumber1[0];
-        } else if (content == 2) {
-            return IDnumber1[1];
-        }
-        return 0
+        } else if (content == 2){
+            return IDnumber1[1];}
+        return IDnumber1[4];
     }
 
 
@@ -270,7 +269,7 @@ namespace HuskyLens {
         receive_index++;
         return false;
     }
-
+    //存储数据
     function data(): void {
         IDnumber1[0] = x1;
         IDnumber1[1] = y1;
